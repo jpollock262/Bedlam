@@ -1,8 +1,9 @@
 package com.example.john.bbbbb;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -10,22 +11,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RelativeLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class OpeningScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_opening_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.title);
         setSupportActionBar(toolbar);
-        RelativeLayout rlayout = (RelativeLayout) findViewById(R.id.activityMain);
-        rlayout.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout rOpeningScreen = (RelativeLayout) findViewById(R.id.activityOpeningScreen);
+
+        rOpeningScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent startMainMenu = new Intent(OpeningScreen.this, mainMenu.class);
+                OpeningScreen.this.startActivity(startMainMenu);
             }
         });
+
     }
 
     @Override

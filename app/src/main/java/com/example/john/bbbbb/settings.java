@@ -1,5 +1,7 @@
 package com.example.john.bbbbb;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,15 +17,22 @@ public class settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        setTitle(R.string.settingsTitle);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
+    }
+
+    public void eraseFile(View v)
+    {
+
+        SharedPreferences file = this.getSharedPreferences("saveFile", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = file.edit();
+        editor.putInt("level", 0);
+        editor.putInt("xp", 0);
+        editor.putInt("fightID", 0);
+        editor.putInt("playerChoice", 0);
+        editor.commit();
+
     }
 
 }
