@@ -36,6 +36,7 @@
         tools:showIn="@layout/activity_continue_game"
         tools:context="com.example.john.bbbbb.continueGame">
 
+
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
