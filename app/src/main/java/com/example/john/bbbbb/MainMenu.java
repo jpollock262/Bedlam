@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 
 public class mainMenu extends AppCompatActivity {
 
@@ -12,34 +13,68 @@ public class mainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setTitle(R.string.title);
 
-    }
 
-    public void openSettings(View v)
-    {
-        Intent openSettings = new Intent(mainMenu.this, settings.class);
-        startActivity(openSettings);
-    }
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });*/
 
-    public void openHighScores(View v)
-    {
-        Intent openHighScores = new Intent(mainMenu.this, highScores.class);
-        startActivity(openHighScores);
-    }
+        Button newGameButton = (Button) findViewById(R.id.newGameButton);
+        Button continueGameButton = (Button) findViewById(R.id.continueGameButton);
+        Button highScoreButton = (Button) findViewById(R.id.highScoreButton);
 
-    public void continueGame(View v)
-    {
-        Intent continueGame = new Intent(mainMenu.this, continueGame.class);
-        startActivity(continueGame);
-    }
 
-    public void newGame (View v)
-    {
-        Intent newGame = new Intent(mainMenu.this, newGame.class);
-        startActivity(newGame);
+
+        newGameButton.setOnClickListener(new View.OnClickListener() {
+
+
+
+            @Override
+
+
+            public void onClick(View view) {
+                mainMenu.this.startActivity(new Intent(mainMenu.this, newGame.class));
+            }
+
+
+        });
+
+        continueGameButton.setOnClickListener(new View.OnClickListener() {
+
+
+
+            @Override
+
+
+            public void onClick(View view) {
+
+            }
+
+
+        });
+
+        highScoreButton.setOnClickListener(new View.OnClickListener() {
+
+
+
+            @Override
+
+
+            public void onClick(View view) {
+                mainMenu.this.startActivity(new Intent(mainMenu.this, highScores.class));
+            }
+
+
+        });
+
     }
 
 }

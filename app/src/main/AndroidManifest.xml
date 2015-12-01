@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".OpeningScreen"
+            android:name=".mainMenu"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -18,31 +18,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".mainMenu"
-            android:label="@string/title_activity_main_menu"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+
         <activity
             android:name=".settings"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+
         <activity
             android:name=".highScores"
             android:label="@string/title_activity_high_scores"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+
         <activity
             android:name=".continueGame"
             android:label="@string/title_activity_continue_game"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+
         <activity
             android:name=".newGame"
-            android:label="@string/title_activity_new_game"
+            android:label="@string/title_activity_new_game" />
+        <activity
+            android:name=".BattleArena"
+            android:label="@string/title_activity_battle_arena"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+
+        <activity
+            android:name=".SelectPower"
+            android:label="@string/title_activity_select_power"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+
     </application>
 
 </manifest>
