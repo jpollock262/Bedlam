@@ -15,4 +15,14 @@
     <string name="continueGame"> Continue Game </string>
     <string name="score"> High Scores </string>
     <string name="fight"> FIGHT </string>
+    <string name="notEffective">\'s attack is super effective!</string>
+    <string name="title_activity_opening_cutscene">OpeningCutscene</string>
+    <string name="title_activity_battle_summary">BattleSummary</string>
+    <string name="continueButton">Continue</string>
+    <string name="title_activity_loading">Loading</string>
+    <string name="title_activity_first_scene">FirstScene</string>
+    <string name="title_activity_second_scene">SecondScene</string>
+    <string name="title_activity_avoid_scene">AvoidScene</string>
+    <string name="title_activity_third_scene">ThirdScene</string>
+    <string name="title_activity_level_up">LevelUp</string>
 </resources>

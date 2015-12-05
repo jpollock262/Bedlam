@@ -48,16 +48,18 @@ public class BattleArena extends AppCompatActivity {
             mainArena();
         }
 
-        tx[Profile.textCounter] = new TextView(BattleArena.this);
-        tx[Profile.textCounter].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        tx[Profile.textCounter].setText("You are battling the " + Profile.currentEnemy.name);
-        layout.addView(tx[Profile.textCounter]);
+        if(Profile.currentEnemy.health > 0 && Profile.profileHero.health > 0) {
+            tx[Profile.textCounter] = new TextView(BattleArena.this);
+            tx[Profile.textCounter].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            tx[Profile.textCounter].setText("You are battling the " + Profile.currentEnemy.name);
+            layout.addView(tx[Profile.textCounter]);
 
 
-        Profile.initCheck = initiationCheck(Profile.profileHero.speed, Profile.currentEnemy.speed, Profile.profileHero.name, Profile.currentEnemy.name, tx, Profile.textCounter, layout);
+            Profile.initCheck = initiationCheck(Profile.profileHero.speed, Profile.currentEnemy.speed, Profile.profileHero.name, Profile.currentEnemy.name, tx, Profile.textCounter, layout);
 
-        Profile.textCounter += 2;
+            Profile.textCounter += 2;
 
+        }
         Button fightButton = (Button) findViewById(R.id.fightButton);
 
 
@@ -119,6 +121,7 @@ public class BattleArena extends AppCompatActivity {
                 tx[Profile.textCounter].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
                 tx[Profile.textCounter].setText("YOU LOST");
                 layout.addView(tx[Profile.textCounter]);
+                startActivity(new Intent(BattleArena.this, newGame.class));
             }
 
             if (Profile.currentEnemy.health <= 0) {
@@ -127,6 +130,8 @@ public class BattleArena extends AppCompatActivity {
                 tx[Profile.textCounter].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
                 tx[Profile.textCounter].setText("You got lucky and won " + Profile.currentEnemy.xpWon + " experience points");
                 layout.addView(tx[Profile.textCounter]);
+                Profile.progress++;
+                startActivity(new Intent(BattleArena.this, BattleSummary.class));
             }
 
         }
@@ -167,7 +172,7 @@ public class BattleArena extends AppCompatActivity {
             healthModification *= 1.5;
             log[line] = new TextView(BattleArena.this);
             log[line].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-            log[line].setText(name + "'s attack is super effective!");
+            log[line].setText(name + getString(R.string.notEffective));
             tv.addView(log[line]);
             Profile.textCounter++;
         }

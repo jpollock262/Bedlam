@@ -9,6 +9,7 @@ public class Profile {
     public static Power power3 = new Power("power1", 'n', 'n', 3);
     public static Power power4 = new Power("power4", 'n', 'n', 4);
     public static Hero profileHero = new Hero("profile", 1, 1, 1, 'n', power1, power2, power3, power4);
+    public static int MAX_HEALTH = 0;
 
     public static int powerSelection = 0;
     public static boolean initCheck = false;
@@ -20,4 +21,6 @@ public class Profile {
     public static Power enemyPower3 = new Power("enemyPower3", 'n', 'n', 3);
     public static Power enemyPower4 = new Power("enemyPower1", 'n', 'n', 4);
     public static Enemy currentEnemy = new Enemy("currentEnemy", 1, 1, 1, 1, enemyPower1, enemyPower2, enemyPower3, enemyPower4, 'n');
+
+    public static int progress = 0;
 }
