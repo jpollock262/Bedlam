@@ -50,6 +50,8 @@ public class newGame extends AppCompatActivity {
 
                 Hero NickSink = new Hero("Nick Sink", 200, 20, 6, 'J', twinTail, nyan, loliTransformation, excalibur);
 
+                Profile.MAX_HEALTH = 200;
+
                 Profile.power1 = twinTail;
 
                 Profile.power2 = nyan;
@@ -77,7 +79,7 @@ public class newGame extends AppCompatActivity {
 
                 Profile.currentEnemy = Gambler;
 
-                newGame.this.startActivity(new Intent(newGame.this, BattleArena.class));
+                newGame.this.startActivity(new Intent(newGame.this, OpeningCutscene.class));
             }
 
 

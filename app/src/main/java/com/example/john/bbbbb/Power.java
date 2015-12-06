@@ -4,6 +4,10 @@ package com.example.john.bbbbb;
  * Created by Tyler on 11/24/2015.
  */
 public class Power {
+
+    /* L = light, D = doctor, M = medicine, P = patient, B = brain, O = office, N = nurse, V = verbal
+     * T = transform, C = currency, W = work, G = game, S = shhh , U = lust*/
+
     String name;
     char type;
     char bonusType;

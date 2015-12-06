@@ -52,6 +52,46 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
+        <activity
+            android:name=".OpeningCutscene"
+            android:label="@string/title_activity_opening_cutscene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".BattleSummary"
+            android:label="@string/title_activity_battle_summary"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".Loading"
+            android:label="@string/title_activity_loading"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".FirstScene"
+            android:label="@string/title_activity_first_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SecondScene"
+            android:label="@string/title_activity_second_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".AvoidScene"
+            android:label="@string/title_activity_avoid_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".ThirdScene"
+            android:label="@string/title_activity_third_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".LevelUp"
+            android:label="@string/title_activity_level_up"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
