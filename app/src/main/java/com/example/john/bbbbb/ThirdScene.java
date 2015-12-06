@@ -47,7 +47,6 @@ public class ThirdScene extends AppCompatActivity {
 
         Button continueButton = (Button) findViewById(R.id.continueButton);
 
-        ;
 
 
         continueButton.setOnClickListener(new View.OnClickListener() {

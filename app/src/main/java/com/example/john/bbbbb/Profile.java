@@ -12,6 +12,7 @@ public class Profile {
     public static int MAX_HEALTH = 0;
 
     public static int powerSelection = 0;
+    public static int enemyPowerSelection = 0;
     public static boolean initCheck = false;
     public static int textCounter = 0;
     public static int fighting = 0;

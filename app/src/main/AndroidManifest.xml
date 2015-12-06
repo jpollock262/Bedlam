@@ -92,6 +92,13 @@
             android:label="@string/title_activity_level_up"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+
+        <activity
+            android:name=".FourthScene"
+            android:label="@string/title_activity_fourth_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+
     </application>
 
 </manifest>

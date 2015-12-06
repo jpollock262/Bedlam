@@ -150,6 +150,7 @@ public class BattleArena extends AppCompatActivity {
             enemyChoice = 2;
         }
         else{ enemyChoice = 3;}
+        Profile.enemyPowerSelection = enemyChoice;;
         return enemyChoice;
     }
 
