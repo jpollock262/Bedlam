@@ -25,4 +25,5 @@
     <string name="title_activity_avoid_scene">AvoidScene</string>
     <string name="title_activity_third_scene">ThirdScene</string>
     <string name="title_activity_level_up">LevelUp</string>
+    <string name="title_activity_fourth_scene">FourthScene</string>
 </resources>

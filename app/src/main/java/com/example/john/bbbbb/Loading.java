@@ -64,6 +64,20 @@ public class Loading extends AppCompatActivity {
             startActivity(new Intent(Loading.this, ThirdScene.class));
             //startActivity(new Intent(Loading.this, BattleArena.class));
         }
+
+        else if(Profile.progress == 4){
+            Profile.profileHero.health = Profile.MAX_HEALTH;
+            Power toyKnife = new Power("It's a fake knife, but still scary", 'S', 'J', 20);
+            Power bandage = new Power("Slapped by the used gooey bandage", 'M', 'Y', 40);
+            Power check = new Power("Your weaknesses are exposed", 'B', Profile.profileHero.defenseType, 60);
+            Power genocide = new Power("FILLED WITH DETERMINATION", 'T', 'S', 80);
+            adjustPowerLevel(toyKnife, bandage, check, genocide);
+            Enemy fallenHuman = new Enemy("Frisk", 100, 100, 10, 2, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'D');
+            adjustEnemyLevel(fallenHuman);
+            startActivity(new Intent(Loading.this, FourthScene.class));
+        }
+
+
     }
 
     public void adjustEnemyLevel(Enemy enemyToChange) {
