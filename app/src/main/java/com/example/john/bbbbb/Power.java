@@ -12,6 +12,15 @@ public class Power {
     char type;
     char bonusType;
     double damage;
+    int picID;
+
+    public Power(String name, char type, char bonusType, double damage, int picID){
+        this.name = name;
+        this.type = type;
+        this.bonusType = bonusType;
+        this.damage = damage;
+        this.picID = picID;
+    }
 
     public Power(String name, char type, char bonusType, double damage){
         this.name = name;
@@ -25,6 +34,7 @@ public class Power {
         this.type = pass.type;
         this.bonusType = pass.bonusType;
         this.damage = pass.damage;
+        this.picID = pass.picID;
     }
 
 }

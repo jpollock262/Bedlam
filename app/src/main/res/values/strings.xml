@@ -45,4 +45,16 @@
     <string name="title_activity_love_scene">loveScene</string>
     <string name="title_activity_eighth_scene">EighthScene</string>
     <string name="title_activity_ninth_scene">NinthScene</string>
+    <string name="cat"> cat </string>
+    <string name="con"> Continue </string>
+    <string name="enemy"> enemy </string>
+    <string name="girl"> girl </string>
+    <string name="magic"> magic </string>
+    <string name="bak"> bak </string>
+    <string name="excalibur"> excalibur</string>
+    <string name="Battle"> Battle</string>
+    <string name="roulette"> roulette</string>
+    <string name="dice"> dice</string>
+    <string name="allin"> allin</string>
+    <string name="heart"> heart</string>
 </resources>

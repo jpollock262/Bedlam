@@ -149,6 +149,11 @@
             android:label="@string/title_activity_ninth_scene"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".Battle"
+            android:label="@string/Battle"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

@@ -43,16 +43,16 @@ public class newGame extends AppCompatActivity {
 
             public void onClick(View view) {
                 //You have befriended a local spirit who seems to have a royal aura and a big sword
-                Power excalibur = new Power("EXCALIBUR!", 'L', 'D', 10000);
+                Power excalibur = new Power("EXCALIBUR!", 'L', 'D', 10000, R.drawable.excalibur);
 
                 //Your prickly exterior has sharpened your tongue to cause actual damage.
-                Power twinTail = new Power("BAKA", 'V', 'D', 50);
+                Power twinTail = new Power("BAKA", 'V', 'D', 50, R.drawable.bak);
 
                 //Cats are your only friends in this desolate place. Use them against your enemy
-                Power nyan = new Power("Cat Scratch Fever", 'A', 'D', 10);
+                Power nyan = new Power("Cat Scratch Fever", 'A', 'D', 10, R.drawable.cat);
 
                 //You have made a deal with a Faustian alien cat. You temporarily use the powers of a magical girl
-                Power loliTransformation = new Power("Mahou Shoujo", 'T', 'D', 40);
+                Power loliTransformation = new Power("Mahou Shoujo", 'T', 'D', 40, R.drawable.magic);
 
                 Hero NickSink = new Hero("Nick Sink", 200, 20, 6, 'J', twinTail, nyan, loliTransformation, excalibur);
 
@@ -70,13 +70,13 @@ public class newGame extends AppCompatActivity {
 
                 Profile.profileHero = NickSink;
 
-                Power roulette = new Power("Bet on the ball", 'G', 'S', 20);
+                Power roulette = new Power("Bet on the ball", 'G', 'S', 20, R.drawable.roulette);
 
-                Power allIn = new Power("Bet Everything", 'V', 'Z', 30);
+                Power allIn = new Power("Bet Everything", 'V', 'Z', 30, R.drawable.allin);
 
-                Power kissDice = new Power("Hope the dice like you", 'B', 'Y', 40);
+                Power kissDice = new Power("Hope the dice like you", 'B', 'Y', 40, R.drawable.dice);
 
-                Power heartOfTheCards = new Power("Look deep within for the perfect card", 'C', 'J', 10);
+                Power heartOfTheCards = new Power("Look deep within for the perfect card", 'C', 'J', 10, R.drawable.heart);
 
                 Enemy Gambler = new Enemy("The Gambler", 100, 150, 30, 10, roulette, allIn, kissDice, heartOfTheCards, 'C');
 

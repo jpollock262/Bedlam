@@ -49,7 +49,7 @@ public class SelectPower extends AppCompatActivity {
                 Profile.powerSelection = 0;
                 //SelectPower.this.startActivity(new Intent(SelectPower.this, BattleArena.class));
                 Profile.fighting++;
-                SelectPower.this.startActivity(new Intent(SelectPower.this, BattleArena.class));
+                SelectPower.this.startActivity(new Intent(SelectPower.this, Battle.class));
             }
 
 
@@ -64,7 +64,7 @@ public class SelectPower extends AppCompatActivity {
             public void onClick(View view) {
                 Profile.powerSelection = 1;
                 Profile.fighting++;
-                SelectPower.this.startActivity(new Intent(SelectPower.this, BattleArena.class));
+                SelectPower.this.startActivity(new Intent(SelectPower.this, Battle.class));
             }
 
 
@@ -79,7 +79,7 @@ public class SelectPower extends AppCompatActivity {
             public void onClick(View view) {
                 Profile.powerSelection = 2;
                 Profile.fighting++;
-                SelectPower.this.startActivity(new Intent(SelectPower.this, BattleArena.class));
+                SelectPower.this.startActivity(new Intent(SelectPower.this, Battle.class));
             }
 
 
@@ -94,7 +94,7 @@ public class SelectPower extends AppCompatActivity {
             public void onClick(View view) {
                 Profile.powerSelection = 3;
                 Profile.fighting++;
-                SelectPower.this.startActivity(new Intent(SelectPower.this, BattleArena.class));
+                SelectPower.this.startActivity(new Intent(SelectPower.this, Battle.class));
             }
 
 
