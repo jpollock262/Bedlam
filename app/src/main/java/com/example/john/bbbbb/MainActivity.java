@@ -9,8 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
-import com.example.john.bbbbb.mainMenu;
-import com.example.john.bbbbb.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
         rOpeningScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startMainMenu = new Intent(MainActivity.this, mainMenu.class);
+                Intent startMainMenu = new Intent(MainActivity.this, MainMenu.class);
                 MainActivity.this.startActivity(startMainMenu);
             }
         });
 
-        startActivity(new Intent(this, mainMenu.class));
+        startActivity(new Intent(this, MainMenu.class));
     }
 
     @Override

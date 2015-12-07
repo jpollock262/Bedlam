@@ -29,6 +29,8 @@ public class LevelUp extends AppCompatActivity {
 
         Profile.profileHero.level++;
 
+        Profile.MAX_HEALTH += Profile.profileHero.level*20;
+
         Button power1Button = (Button) findViewById(R.id.power1);
         Button power2Button = (Button) findViewById(R.id.power2);
         Button power3Button = (Button) findViewById(R.id.power3);

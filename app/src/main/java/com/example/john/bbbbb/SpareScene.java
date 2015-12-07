@@ -11,12 +11,12 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class AvoidScene extends AppCompatActivity {
+public class SpareScene extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_avoid_scene);
+        setContentView(R.layout.activity_spare_scene);
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -29,7 +29,9 @@ public class AvoidScene extends AppCompatActivity {
             }
         });*/
 
-        LinearLayout layout = (LinearLayout) findViewById(R.id.openingText);
+        Profile.sparedFrisk = true;
+
+        LinearLayout layout = (LinearLayout) findViewById(R.id.spareSceneText);
         TextView[] tx = new TextView[100];
         /*for (int i = 0; i < 10; i++) {
             tx[i] = new TextView(BattleArena.this);
@@ -38,14 +40,24 @@ public class AvoidScene extends AppCompatActivity {
             layout.addView(tx[i]);
         }*/
         int i = 0;
-        tx[i] = new TextView(AvoidScene.this);
+        tx[i] = new TextView(SpareScene.this);
         tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        tx[i].setText("The ventilation shaft is hot. You hear the click of the head nurse's stapler as she does her paperwork."
-                + "You inhale some dust and cough loudly. You hear the stapler stop. Your body freezes and you stay as quiet as possible."
-                + "It seems to take forever, but she eventually resumes stapling. You keep crawling. You are through.");
+        tx[i].setText("For an instant you see the potential, everyone living together happily. No one committing violence. Frisk looks up with innocence in her eyes"
+                + "Her small hand reaches toward you and you grasp ready to live your life together.");
         layout.addView(tx[i]);
-        Profile.progress++;
-        Profile.avoidedNurse = true;
+        i++;
+        tx[i] = new TextView(SpareScene.this);
+        tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        tx[i].setText("But this hospital sucks the happiness from everyone who enters. This happy scene with Frisk is too much for the soul-sucking behemoth to stomach.");
+        layout.addView(tx[i]);
+        i++;
+        tx[i] = new TextView(SpareScene.this);
+        tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        tx[i].setText("The hospital takes this happiness from you too. Out of nowhere a dart flies into Frisk. No doubt one of the many serums developed and tested on the patients at this asylum, "
+                + "the darkness you remember seeing behind Frisk's eyes take over and she attacks.");
+        layout.addView(tx[i]);
+        //Profile.progress++;
+
 
         Button continueButton = (Button) findViewById(R.id.continueButton);
 
@@ -60,7 +72,7 @@ public class AvoidScene extends AppCompatActivity {
 
             public void onClick(View view) {
 
-                AvoidScene.this.startActivity(new Intent(AvoidScene.this, Loading.class));
+                SpareScene.this.startActivity(new Intent(SpareScene.this, BattleArena.class));
             }
 
 

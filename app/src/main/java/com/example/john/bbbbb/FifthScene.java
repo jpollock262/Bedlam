@@ -11,13 +11,13 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class FirstScene extends AppCompatActivity {
+public class FifthScene extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_scene);
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(R.layout.activity_fifth_scene);
+       /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -29,7 +29,7 @@ public class FirstScene extends AppCompatActivity {
             }
         });*/
 
-        LinearLayout layout = (LinearLayout) findViewById(R.id.firstSceneText);
+        LinearLayout layout = (LinearLayout) findViewById(R.id.fifthSceneText);
         TextView[] tx = new TextView[100];
         /*for (int i = 0; i < 10; i++) {
             tx[i] = new TextView(BattleArena.this);
@@ -38,11 +38,21 @@ public class FirstScene extends AppCompatActivity {
             layout.addView(tx[i]);
         }*/
         int i = 0;
-        tx[0] = new TextView(FirstScene.this);
-        tx[0].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        tx[0].setText("You exit the room and carefully peak out into the hallway. Down the hallway is everyone's least favorite nurse." + "No one knows his name. He just goes by the servant"
-        + "All he does is shame the patients in a foreign language and play the crying victim when people complain.");
-        layout.addView(tx[0]);
+        tx[i] = new TextView(FifthScene.this);
+        tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        tx[i].setText("Somewhere deep in your subconscious you cringe at the imagined sound of a tardy bell ringing through the hallways. That can only mean one thing.");
+        layout.addView(tx[i]);
+        i++;
+        tx[i] = new TextView(FifthScene.this);
+        tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        tx[i].setText("The Professor");
+        layout.addView(tx[i]);
+        i++;
+        tx[i] = new TextView(FifthScene.this);
+        tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        tx[i].setText("Regardless of past decisions, you relish the chance to fight this monster. Disguised as a 'rehabilitation' program for patients, the doctor would gauge the intelligence levels of patients. "
+            + "Based on these results, patients would be sorted into groups to be put into certain, very legal (according to them) experiments.");
+        layout.addView(tx[i]);
 
 
         Button continueButton = (Button) findViewById(R.id.continueButton);
@@ -58,11 +68,12 @@ public class FirstScene extends AppCompatActivity {
 
             public void onClick(View view) {
 
-                FirstScene.this.startActivity(new Intent(FirstScene.this, BattleArena.class));
+                FifthScene.this.startActivity(new Intent(FifthScene.this, BattleArena.class));
             }
 
 
         });
+
 
     }
 

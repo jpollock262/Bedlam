@@ -25,8 +25,14 @@ public class newGame extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
+        Profile.PROFILE_ID = 1;
+
+        MyDBHandler profile = new MyDBHandler(this, null, null, 1);
+        Score newScores = new Score(Profile.PROFILE_ID,0,0,0,0);
+        profile.addScores(newScores);
 
         Button nickSyncSelect = (Button) findViewById(R.id.nickSyncSelect);
+        Button justinFieverSelect = (Button) findViewById(R.id.justinFieverSelect);
 
         nickSyncSelect.setOnClickListener(new View.OnClickListener() {
 
@@ -51,6 +57,8 @@ public class newGame extends AppCompatActivity {
                 Hero NickSink = new Hero("Nick Sink", 200, 20, 6, 'J', twinTail, nyan, loliTransformation, excalibur);
 
                 Profile.MAX_HEALTH = 200;
+
+                Profile.PROFILE_ID = 1;
 
                 Profile.power1 = twinTail;
 
@@ -78,6 +86,87 @@ public class newGame extends AppCompatActivity {
                 Profile.enemyPower4 = heartOfTheCards;
 
                 Profile.currentEnemy = Gambler;
+
+                Profile.progress = 0;
+                Profile.fighting = 0;
+                Profile.textCounter = 0;
+                Profile.largestCrit = 0;
+                Profile.largestAtk = 0;
+                Profile.initCheck = false;
+                Profile.powerSelection = 0;
+                Profile.enemyPowerSelection = 0;
+
+                Profile.overallScore = 0;
+
+                newGame.this.startActivity(new Intent(newGame.this, OpeningCutscene.class));
+            }
+
+
+        });
+
+        justinFieverSelect.setOnClickListener(new View.OnClickListener() {
+
+
+
+            @Override
+
+
+            public void onClick(View view) {
+                //You have befriended a local spirit who seems to have a royal aura and a big sword
+                Power falsetto = new Power("Falsetto Fire!", 'V', 'D', 10000);
+
+                //Your prickly exterior has sharpened your tongue to cause actual damage.
+                Power tantrum = new Power("Tiny Tantrum", 'T', 'D', 50);
+
+                //Cats are your only friends in this desolate place. Use them against your enemy
+                Power crashNBurn = new Power("Crash and Burn", 'A', 'D', 10);
+
+                //You have made a deal with a Faustian alien cat. You temporarily use the powers of a magical girl
+                Power glare = new Power("Baby Face Glare", 'T', 'D', 40);
+
+                Hero JustinFiever = new Hero("Justin Fiever", 200, 20, 6, 'J', glare, crashNBurn, tantrum, falsetto);
+
+                Profile.MAX_HEALTH = 200;
+
+                Profile.PROFILE_ID = 1;
+
+                Profile.power1 = glare;
+
+                Profile.power2 = crashNBurn;
+
+                Profile.power3 = tantrum;
+
+                Profile.power4 = falsetto;
+
+                Profile.profileHero = JustinFiever;
+
+                Power roulette = new Power("Bet on the ball", 'G', 'S', 20);
+
+                Power allIn = new Power("Bet Everything", 'V', 'Z', 30);
+
+                Power kissDice = new Power("Hope the dice like you", 'B', 'Y', 40);
+
+                Power heartOfTheCards = new Power("Look deep within for the perfect card", 'C', 'J', 10);
+
+                Enemy Gambler = new Enemy("The Gambler", 100, 150, 30, 10, roulette, allIn, kissDice, heartOfTheCards, 'C');
+
+                Profile.enemyPower1 = roulette;
+                Profile.enemyPower2 = allIn;
+                Profile.enemyPower3 = kissDice;
+                Profile.enemyPower4 = heartOfTheCards;
+
+                Profile.currentEnemy = Gambler;
+
+                Profile.progress = 0;
+                Profile.fighting = 0;
+                Profile.textCounter = 0;
+                Profile.largestCrit = 0;
+                Profile.largestAtk = 0;
+                Profile.initCheck = false;
+                Profile.powerSelection = 0;
+                Profile.enemyPowerSelection = 0;
+
+                Profile.overallScore = 0;
 
                 newGame.this.startActivity(new Intent(newGame.this, OpeningCutscene.class));
             }

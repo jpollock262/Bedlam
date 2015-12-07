@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context="com.example.john.bbbbb.SecondScene">
+    tools:context="com.example.john.bbbbb.SeventhScene">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/scrollView">
             <LinearLayout
-                android:id="@+id/secondSceneText"
+                android:id="@+id/seventhSceneText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"/>
@@ -24,22 +24,10 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="FIGHT"
-            android:id="@+id/fightNurse"
+            android:text="@string/continueButton"
+            android:id="@+id/continueButton"
             android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/avoidButton"
-            android:layout_toStartOf="@+id/avoidButton" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ventilation Shaft"
-            android:id="@+id/avoidButton"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="41dp"
-            android:layout_marginEnd="41dp" />
+            android:layout_centerHorizontal="true" />
 
 
     </RelativeLayout>

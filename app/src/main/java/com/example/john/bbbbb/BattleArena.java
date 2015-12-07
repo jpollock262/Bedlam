@@ -83,7 +83,7 @@ public class BattleArena extends AppCompatActivity {
             LinearLayout layout = (LinearLayout) findViewById(R.id.LinearLayout1);
             TextView[] tx = new TextView[100];
 
-            int enemyChoice = choice(Profile.currentEnemy);
+            int enemyChoice = Profile.enemyPowerSelection;
 
             int playerChoice = Profile.powerSelection;
 
@@ -92,7 +92,7 @@ public class BattleArena extends AppCompatActivity {
             bHPmod = attackCalculator(Profile.profileHero.name, Profile.profileHero.skillset[playerChoice], Profile.currentEnemy.defenseType, tx, Profile.textCounter, layout);
             pHPmod = attackCalculator(Profile.currentEnemy.name, Profile.currentEnemy.whatFucksYou[enemyChoice], Profile.profileHero.defenseType, tx, Profile.textCounter, layout);
 
-
+            Profile.enemyPowerSelection = choice(Profile.currentEnemy);
 
             if(Profile.initCheck){
 
@@ -166,6 +166,10 @@ public class BattleArena extends AppCompatActivity {
             log[line].setText(name + "'s attack is not very effective.");
             tv.addView(log[line]);
             Profile.textCounter++;
+            if(healthModification > Profile.largestAtk)
+            {
+                Profile.largestAtk = (int) healthModification;
+            }
         }
 
         //test if attack does bonus
@@ -174,6 +178,10 @@ public class BattleArena extends AppCompatActivity {
             log[line] = new TextView(BattleArena.this);
             log[line].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             log[line].setText(name + getString(R.string.notEffective));
+            if(healthModification > Profile.largestAtk)
+            {
+                Profile.largestAtk = (int) healthModification;
+            }
             tv.addView(log[line]);
             Profile.textCounter++;
         }
@@ -184,6 +192,10 @@ public class BattleArena extends AppCompatActivity {
             log[line] = new TextView(BattleArena.this);
             log[line].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             log[line].setText("CRITICAL STRIKE for " + name);
+            if(healthModification > Profile.largestCrit)
+            {
+                Profile.largestCrit = (int) healthModification;
+            }
             tv.addView(log[line]);
             Profile.textCounter++;
         }
