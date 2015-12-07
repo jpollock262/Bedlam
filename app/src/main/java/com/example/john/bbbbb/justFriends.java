@@ -11,13 +11,13 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class FirstScene extends AppCompatActivity {
+public class justFriends extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_scene);
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(R.layout.activity_just_friends);
+       /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -29,7 +29,7 @@ public class FirstScene extends AppCompatActivity {
             }
         });*/
 
-        LinearLayout layout = (LinearLayout) findViewById(R.id.firstSceneText);
+        LinearLayout layout = (LinearLayout) findViewById(R.id.justFriendsSceneText);
         TextView[] tx = new TextView[100];
         /*for (int i = 0; i < 10; i++) {
             tx[i] = new TextView(BattleArena.this);
@@ -38,11 +38,23 @@ public class FirstScene extends AppCompatActivity {
             layout.addView(tx[i]);
         }*/
         int i = 0;
-        tx[0] = new TextView(FirstScene.this);
-        tx[0].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        tx[0].setText("You exit the room and carefully peak out into the hallway. Down the hallway is everyone's least favorite nurse." + "No one knows his name. He just goes by the servant"
-        + "All he does is shame the patients in a foreign language and play the crying victim when people complain.");
-        layout.addView(tx[0]);
+        tx[i] = new TextView(justFriends.this);
+        tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        tx[i].setText("She turns to you with an odd look on her face and says, ");
+        layout.addView(tx[i]);
+        i++;
+        tx[i] = new TextView(justFriends.this);
+        tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        tx[i].setText("I believe that both of us will get out of this place. And I know you have feelings for me. But I don't feel that way about you. "
+            + "I was in love with the idea of love. It could have been anyone. You aren't special. I'm sorry. We shouldn't see each other if we both make it out of here.");
+        layout.addView(tx[i]);
+        i++;
+        tx[i] = new TextView(justFriends.this);
+        tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        tx[i].setText("She walks away. You curse this hospital for taking everything from you. You prepare to walk into the final battle.");
+        layout.addView(tx[i]);
+
+        Profile.progress++;
 
 
         Button continueButton = (Button) findViewById(R.id.continueButton);
@@ -58,7 +70,7 @@ public class FirstScene extends AppCompatActivity {
 
             public void onClick(View view) {
 
-                FirstScene.this.startActivity(new Intent(FirstScene.this, BattleArena.class));
+                justFriends.this.startActivity(new Intent(justFriends.this, Loading.class));
             }
 
 
@@ -66,4 +78,6 @@ public class FirstScene extends AppCompatActivity {
 
     }
 
-}
+    }
+
+

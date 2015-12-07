@@ -11,12 +11,12 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class FirstScene extends AppCompatActivity {
+public class NinthScene extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_scene);
+        setContentView(R.layout.activity_ninth_scene);
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -29,7 +29,7 @@ public class FirstScene extends AppCompatActivity {
             }
         });*/
 
-        LinearLayout layout = (LinearLayout) findViewById(R.id.firstSceneText);
+        LinearLayout layout = (LinearLayout) findViewById(R.id.ninthSceneText);
         TextView[] tx = new TextView[100];
         /*for (int i = 0; i < 10; i++) {
             tx[i] = new TextView(BattleArena.this);
@@ -38,16 +38,14 @@ public class FirstScene extends AppCompatActivity {
             layout.addView(tx[i]);
         }*/
         int i = 0;
-        tx[0] = new TextView(FirstScene.this);
-        tx[0].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        tx[0].setText("You exit the room and carefully peak out into the hallway. Down the hallway is everyone's least favorite nurse." + "No one knows his name. He just goes by the servant"
-        + "All he does is shame the patients in a foreign language and play the crying victim when people complain.");
-        layout.addView(tx[0]);
+        tx[i] = new TextView(NinthScene.this);
+        tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        tx[i].setText("You leave the asylum. You feel the freedom. Then you realize. Crap. Now you have to fight real life.");
+        layout.addView(tx[i]);
 
 
         Button continueButton = (Button) findViewById(R.id.continueButton);
 
-        ;
 
 
         continueButton.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +56,7 @@ public class FirstScene extends AppCompatActivity {
 
             public void onClick(View view) {
 
-                FirstScene.this.startActivity(new Intent(FirstScene.this, BattleArena.class));
+                NinthScene.this.startActivity(new Intent(NinthScene.this, MainMenu.class));
             }
 
 

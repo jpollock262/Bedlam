@@ -26,4 +26,14 @@
     <string name="title_activity_third_scene">ThirdScene</string>
     <string name="title_activity_level_up">LevelUp</string>
     <string name="title_activity_fourth_scene">FourthScene</string>
+    <string name="title_activity_fifth_scene">FifthScene</string>
+    <string name="title_activity_spare_scene">SpareScene</string>
+    <string name="title_activity_sixth_scene">SixthScene</string>
+    <string name="title_activity_seventh_scene">SeventhScene</string>
+    <string name="title_activity_just_friends">justFriends</string>
+    <string name="title_activity_tsundere_test">tsundereTest</string>
+    <string name="title_activity_good_friends">goodFriends</string>
+    <string name="title_activity_love_scene">loveScene</string>
+    <string name="title_activity_eighth_scene">EighthScene</string>
+    <string name="title_activity_ninth_scene">NinthScene</string>
 </resources>

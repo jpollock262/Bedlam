@@ -43,19 +43,64 @@ public class BattleSummary extends AppCompatActivity {
         tx[i].setText("You won " + Profile.currentEnemy.xpWon + " XP.");
         layout.addView(tx[i]);
         i++;
-        int points = Profile.currentEnemy.health * -1 - Profile.fighting;
-        Profile.fighting = 0;
+        int points = Profile.currentEnemy.xpWon + Profile.currentEnemy.health * -1 - Profile.fighting;
+        Profile.overallScore += points;
+        //Profile.fighting = 0;
         tx[i] = new TextView(BattleSummary.this);
         tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         tx[i].setText("You got " + points + " points.");
         layout.addView(tx[i]);
 
+
+        MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
+
+        Score temp = dbHandler.findScores(Profile.PROFILE_ID);
+
+
+        if(Profile.progress == 1)
+        {
+            temp.setLongestBattleTime(Profile.fighting);
+            temp.setShortestBattleTime(Profile.fighting);
+            temp.setHighScore(points);
+            temp.setStrongestAtk(Profile.largestAtk);
+            temp.setStrongestCritAtk(Profile.largestCrit);
+        }
+        if(Profile.fighting < temp.getShortestBattleTime())
+        {
+            temp.setShortestBattleTime(Profile.fighting);
+        }
+        if(Profile.fighting > temp.getLongestBattleTime())
+        {
+            temp.setLongestBattleTime(Profile.fighting);
+        }
+        if (Profile.largestAtk > temp.getStrongestAtk())
+        {
+            temp.setStrongestAtk(Profile.largestAtk);
+        }
+        if(Profile.largestCrit > temp.getStrongestCritAtk())
+        {
+            temp.setStrongestCritAtk(Profile.largestCrit);
+        }
+        if(points > temp.getHighScore())
+        {
+            temp.setHighScore(points);
+        }
+        dbHandler.update(temp);
+
         Profile.profileHero.experiencePoints += Profile.currentEnemy.xpWon;
+
+        i++;
+        tx[i] = new TextView(BattleSummary.this);
+        tx[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        Score temp2 = dbHandler.findScores(Profile.PROFILE_ID);
+        int highScore = temp2.getHighScore();
+        tx[i].setText("High score is " + highScore);
+        layout.addView(tx[i]);
 
 
         Button continueButton = (Button) findViewById(R.id.continueButtonSummary);
 
-        ;
+
 
 
         continueButton.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +110,7 @@ public class BattleSummary extends AppCompatActivity {
 
 
             public void onClick(View view) {
-                if(Profile.profileHero.experiencePoints >= 100 * Profile.profileHero.level){
+                if(Profile.profileHero.experiencePoints >= (100 * Profile.profileHero.level)){
                     startActivity(new Intent(BattleSummary.this, LevelUp.class));
                 }
                 else{

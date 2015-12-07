@@ -79,6 +79,56 @@
             android:label="@string/title_activity_fourth_scene"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".FifthScene"
+            android:label="@string/title_activity_fifth_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SpareScene"
+            android:label="@string/title_activity_spare_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SixthScene"
+            android:label="@string/title_activity_sixth_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SeventhScene"
+            android:label="@string/title_activity_seventh_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".justFriends"
+            android:label="@string/title_activity_just_friends"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".tsundereTest"
+            android:label="@string/title_activity_tsundere_test"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".goodFriends"
+            android:label="@string/title_activity_good_friends"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".loveScene"
+            android:label="@string/title_activity_love_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".EighthScene"
+            android:label="@string/title_activity_eighth_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".NinthScene"
+            android:label="@string/title_activity_ninth_scene"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
