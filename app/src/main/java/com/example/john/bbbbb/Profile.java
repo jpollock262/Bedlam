@@ -22,6 +22,9 @@ public class Profile {
     public static int fighting = 0;
     public static int largestAtk = 0;
     public static int largestCrit = 0;
+    public static int highScore = 0;
+    public static int shortestBattle = 0;
+    public static int longestBattle = 0;
 
     public static Power enemyPower1 = new Power("enemyPower1", 'n', 'n', 1);
     public static Power enemyPower2 = new Power("enemyPower2", 'n', 'n', 2);

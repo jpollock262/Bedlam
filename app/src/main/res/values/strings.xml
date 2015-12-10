@@ -12,7 +12,7 @@
     <string name="settingsTitle">Settings</string>
     <string name="eraseFileButton">Erase File</string>
     <string name="title_activity_battle_arena">BattleArena</string>
-    <string name="title_activity_high_scores" />
+    <string name="title_activity_high_scores">High Scores</string>
     <string name="title_activity_new_game" />
     <string name="nick"> Nick Sync</string>
     <string name="title_activity_select_power">SelectPower</string> 
@@ -57,4 +57,5 @@
     <string name="dice"> dice</string>
     <string name="allin"> allin</string>
     <string name="heart"> heart</string>
+    <string name="dbName">High Scores</string>
 </resources>

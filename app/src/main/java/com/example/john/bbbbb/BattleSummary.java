@@ -52,7 +52,7 @@ public class BattleSummary extends AppCompatActivity {
         layout.addView(tx[i]);
 
 
-        MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
+        MyDBHandler dbHandler = new MyDBHandler(this, "scoreboardDB.db", null, 1);
 
         Score temp = dbHandler.findScores(Profile.PROFILE_ID);
 
