@@ -6,19 +6,24 @@
     android:layout_height="match_parent" android:fitsSystemWindows="true"
     tools:context="com.example.john.bbbbb.OpeningCutscene">
 
-    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
-        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
 
-    </android.support.design.widget.AppBarLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/scrollView">
+            android:src="@drawable/abandoned_asylum_room"
+            android:layout_above="@+id/continueButton"
+            android:layout_marginBottom="68dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/scrollView"
+            android:layout_alignParentBottom="true">
             <LinearLayout
                 android:id="@+id/openingText"
                 android:layout_width="fill_parent"
@@ -31,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="@string/continueButton"
             android:id="@+id/continueButton"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/scrollView"
             android:layout_centerHorizontal="true" />
 
 

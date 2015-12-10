@@ -27,7 +27,6 @@ public class MainMenu extends AppCompatActivity {
         });*/
 
         Button newGameButton = (Button) findViewById(R.id.newGameButton);
-        Button continueGameButton = (Button) findViewById(R.id.continueGameButton);
         Button highScoreButton = (Button) findViewById(R.id.highScoreButton);
 
 
@@ -46,19 +45,6 @@ public class MainMenu extends AppCompatActivity {
 
         });
 
-        continueGameButton.setOnClickListener(new View.OnClickListener() {
-
-
-
-            @Override
-
-
-            public void onClick(View view) {
-
-            }
-
-
-        });
 
         highScoreButton.setOnClickListener(new View.OnClickListener() {
 

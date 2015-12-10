@@ -12,8 +12,9 @@ public class Hero {
     public double speed;
     public char defenseType;
     Power[] skillset = new Power[4];
+    int imgSource;
 
-    public Hero(String name, int hp, int mp, double speed, char defend, Power howYouAreCool, Power howYouKickAss, Power howYouWillWin, Power howYouBecomeVictorious){
+    public Hero(String name, int hp, int mp, double speed, char defend, Power howYouAreCool, Power howYouKickAss, Power howYouWillWin, Power howYouBecomeVictorious, int imgSource){
         this.name = name;
         this.experiencePoints = 0;
         this.level = 0;
@@ -25,6 +26,7 @@ public class Hero {
         skillset[1] = new Power(howYouKickAss);
         skillset[2] = new Power(howYouWillWin);
         skillset[3] = new Power(howYouBecomeVictorious);
+        this.imgSource = imgSource;
     }
 
     public Hero(Hero copy){
@@ -39,5 +41,6 @@ public class Hero {
         this.skillset[1] = copy.skillset[1];
         this.skillset[2] = copy.skillset[2];
         this.skillset[3] = copy.skillset[3];
+        this.imgSource = copy.imgSource;
     }
 }

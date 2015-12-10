@@ -10,10 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outside"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/continueButton" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/scrollView"
+            android:layout_alignParentBottom="true">
         <LinearLayout
             android:id="@+id/ninthSceneText"
             android:layout_width="fill_parent"
@@ -26,7 +34,7 @@
         android:layout_height="wrap_content"
         android:text="@string/continueButton"
         android:id="@+id/continueButton"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/scrollView"
         android:layout_centerHorizontal="true" />
 
     </RelativeLayout>

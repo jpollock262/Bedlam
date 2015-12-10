@@ -8,16 +8,29 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.john.bbbbb.highScores">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-
-    </android.support.design.widget.AppBarLayout>
-    <TableLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </TableLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+        <LinearLayout
+            android:id="@+id/highScores"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continueButton"
+        android:id="@+id/goToMainMenu"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -34,30 +34,18 @@
             android:layout_height="wrap_content"
             android:text="@string/newGame"
             android:id="@+id/newGameButton"
-            android:layout_above="@+id/continueGameButton"
-            android:layout_alignLeft="@+id/continueGameButton"
-            android:layout_alignStart="@+id/continueGameButton"
-            android:layout_alignRight="@+id/continueGameButton"
-            android:layout_alignEnd="@+id/continueGameButton" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/continueGame"
-            android:id="@+id/continueGameButton"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
+
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/score"
             android:id="@+id/highScoreButton"
-            android:layout_below="@+id/continueGameButton"
-            android:layout_alignLeft="@+id/continueGameButton"
-            android:layout_alignStart="@+id/continueGameButton"
-            android:layout_alignRight="@+id/continueGameButton"
-            android:layout_alignEnd="@+id/continueGameButton" />
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="65dp" />
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -27,8 +27,16 @@ public class Battle extends AppCompatActivity
         TranslateAnimation moveLefttoRight=new TranslateAnimation(-200, 2000,50,50);
         moveLefttoRight.setDuration(4000);
         moveLefttoRight.setFillAfter(true);
+        TranslateAnimation moveRightoLeft=new TranslateAnimation(200, -2000,50,50);
+        moveRightoLeft.setDuration(4000);
+        moveRightoLeft.setFillAfter(true);
         ImageView attackanimation = (ImageView) findViewById(R.id.bak);
         ImageView eattackanimation = (ImageView) findViewById(R.id.heart);
+        ImageView hero = (ImageView) findViewById(R.id.hero);
+        ImageView enemy = (ImageView) findViewById(R.id.enemy);
+
+        hero.setImageResource(Profile.profileHero.imgSource);
+        enemy.setImageResource(Profile.currentEnemy.imgSource);
         //AnimatorSet aSet = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.eswing);
         //AnimatorSet bSet = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.pswing);
         switch(Profile.powerSelection)
@@ -48,11 +56,9 @@ public class Battle extends AppCompatActivity
                 attackanimation.setImageResource(Profile.power4.picID);
                 break;
         }
-        attackanimation.startAnimation(moveLefttoRight);
 
-        TranslateAnimation moveRightoLeft=new TranslateAnimation(200, -2000,50,50);
-        moveRightoLeft.setDuration(4000);
-        moveRightoLeft.setFillAfter(true);
+
+
 
         switch(Profile.enemyPowerSelection)
         {
@@ -72,6 +78,7 @@ public class Battle extends AppCompatActivity
                 eattackanimation.setImageResource(Profile.enemyPower4.picID);
                 break;
         }
+        attackanimation.startAnimation(moveLefttoRight);
         eattackanimation.startAnimation(moveRightoLeft);
 
 

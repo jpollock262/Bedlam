@@ -12,10 +12,11 @@ public class Enemy {
     public double speed;
     Power[] whatFucksYou = new Power[4];
     public char defenseType;
+    int imgSource;
 
     // public artificialIntelligence brain;
 
-    public Enemy (String name, int xpWon, int health, int mana, double speed, Power first, Power second, Power third, Power fourth, char defenseType){
+    public Enemy (String name, int xpWon, int health, int mana, double speed, Power first, Power second, Power third, Power fourth, char defenseType, int imgSource){
         this.name = name;
         this.xpWon = xpWon;
         this.health = health;
@@ -26,6 +27,7 @@ public class Enemy {
         whatFucksYou[2] = new Power(third);
         whatFucksYou[3] = new Power(fourth);
         this.defenseType = defenseType;
+        this.imgSource = imgSource;
     }
 
 }

@@ -33,16 +33,17 @@
             android:layout_height="wrap_content"
             android:text="Justin Fiever"
             android:id="@+id/justinFieverSelect"
-            android:layout_alignBottom="@+id/nickSyncSelect"
+            android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="41dp"/>
 
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button3"
+            android:text="E-M O'town"
+            android:id="@+id/emotownSelect"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -51,11 +52,12 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button4"
-            android:layout_alignBottom="@+id/button3"
+            android:text="Lorde"
+            android:id="@+id/lordeSelect"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="88dp"/>
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

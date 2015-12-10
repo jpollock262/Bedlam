@@ -30,10 +30,10 @@
 
 
         <ImageView
-            android:id="@+id/nick"
+            android:id="@+id/hero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/nick"
+            android:contentDescription="Hero"
             android:src="@drawable/nick"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
@@ -43,9 +43,9 @@
             android:id="@+id/enemy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/enemy"
+            android:contentDescription="Enemy"
             android:src="@drawable/enemy"
-            android:layout_alignTop="@+id/nick"
+            android:layout_alignTop="@+id/hero"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             />

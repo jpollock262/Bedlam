@@ -36,7 +36,7 @@ public class Loading extends AppCompatActivity {
             Power sinOfMankind = new Power("MONUMENT TO ALL YOUR SINS", 'T', 'Y', 70, R.drawable.sins);
             Power bazettsWish = new Power("I don't want to die", 'V', 'J', 2, R.drawable.wish);
             adjustPowerLevel(hentaiUnlock, feelsTrip, sinOfMankind, bazettsWish);
-            Enemy eighthServant = new Enemy("The Eighth Servant", 100,150, 20, 18, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'N');
+            Enemy eighthServant = new Enemy("The Eighth Servant", 100,150, 20, 18, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'N', R.drawable.the_eighth_servant);
             adjustEnemyLevel(eighthServant);
             startActivity(new Intent(Loading.this, FirstScene.class));
             //startActivity(new Intent(Loading.this, BattleArena.class));
@@ -52,7 +52,7 @@ public class Loading extends AppCompatActivity {
             Power paperwork = new Power("Bureaucracy FTW", 'W', 'Z',10, R.drawable.papers);
             Power lobotomize = new Power("Emergency Vegetable", 'B', 'Y',70, R.drawable.scalpel);
             adjustPowerLevel(ivSlash, stableStaple, paperwork, lobotomize);
-            Enemy headNurse = new Enemy("Head Nurse", 100,150, 20, 18, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'N');
+            Enemy headNurse = new Enemy("Head Nurse", 100,150, 20, 18, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'N', R.drawable.head_nurse);
             adjustEnemyLevel(headNurse);
             startActivity(new Intent(Loading.this, SecondScene.class));
             //startActivity(new Intent(Loading.this, BattleArena.class));
@@ -68,7 +68,7 @@ public class Loading extends AppCompatActivity {
             Power sharedHallucination = new Power("Shared Hallucination", 'B', 'Z', 20, R.drawable.shrooms);
             Power reflect = new Power("Existentially despair on your place in the universe", 'B', 'J',70, R.drawable.reflect);
             adjustPowerLevel(patientAssistedSuicide, pickPocket, sharedHallucination, reflect);
-            Enemy rival = new Enemy("Rival Patient", 200,150, 20, 5, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'P');
+            Enemy rival = new Enemy("Rival Patient", 200,150, 20, 5, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'P', R.drawable.rival_patient);
             adjustEnemyLevel(rival);
             startActivity(new Intent(Loading.this, ThirdScene.class));
             //startActivity(new Intent(Loading.this, BattleArena.class));
@@ -84,7 +84,7 @@ public class Loading extends AppCompatActivity {
             Power check = new Power("Your weaknesses are exposed", 'B', Profile.profileHero.defenseType, 60, R.drawable.magnifyingglass);
             Power genocide = new Power("FILLED WITH DETERMINATION", 'T', 'S', 80, R.drawable.basicredheart);
             adjustPowerLevel(toyKnife, bandage, check, genocide);
-            Enemy fallenHuman = new Enemy("Frisk", 100, 100, 10, 2, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'D');
+            Enemy fallenHuman = new Enemy("Frisk", 100, 100, 10, 2, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'D', R.drawable.frisk);
             adjustEnemyLevel(fallenHuman);
             startActivity(new Intent(Loading.this, FourthScene.class));
         }
@@ -94,12 +94,12 @@ public class Loading extends AppCompatActivity {
             Profile.fighting = 0;
             Profile.largestAtk = 0;
             Profile.largestCrit = 0;
-            Power noComputers = new Power("Long, monotonous lecture", 'V', 'Z', 20);
-            Power forcedAllNighter = new Power("All-Nighter", 'B', 'Y', 40);
-            Power popQuiz = new Power("Surprise quiz you didn't study for", 'B', 'S', 20);
-            Power semesterProject = new Power("Large grade-determining group project", 'B', 'J', 100);
+            Power noComputers = new Power("Long, monotonous lecture", 'V', 'Z', 20, R.drawable.lecture);
+            Power forcedAllNighter = new Power("All-Nighter", 'B', 'Y', 40, R.drawable.all_nighter);
+            Power popQuiz = new Power("Surprise quiz you didn't study for", 'B', 'S', 20, R.drawable.pop_quiz);
+            Power semesterProject = new Power("Large grade-determining group project", 'B', 'J', 100, R.drawable.school_project);
             adjustPowerLevel(noComputers, forcedAllNighter, popQuiz, semesterProject);
-            Enemy professor = new Enemy("Professor turned doctor", 100, 100, 10, 2, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'D');
+            Enemy professor = new Enemy("Professor turned doctor", 100, 100, 10, 2, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'D', R.drawable.professor);
             adjustEnemyLevel(professor);
             startActivity(new Intent(Loading.this, FifthScene.class));
         }
@@ -109,12 +109,12 @@ public class Loading extends AppCompatActivity {
             Profile.fighting = 0;
             Profile.largestAtk = 0;
             Profile.largestCrit = 0;
-            Power seclude = new Power("Forced Isolation", 'T', 'S', 20);
-            Power nerf = new Power("Adjust the numbers in your favor", 'G', 'Y', 40);
-            Power mango = new Power("The Power of Mango", 'M', 'Z', 20);
-            Power balance = new Power("Everything is balanced Kappa", 'G', 'J', 100);
+            Power seclude = new Power("Forced Isolation", 'T', 'S', 20, R.drawable.seclude);
+            Power nerf = new Power("Adjust the numbers in your favor", 'G', 'Y', 40, R.drawable.nerf);
+            Power mango = new Power("The Power of Mango", 'M', 'Z', 20, R.drawable.mango);
+            Power balance = new Power("Everything is balanced Kappa", 'G', 'J', 100, R.drawable.balance);
             adjustPowerLevel(seclude, nerf, mango, balance);
-            Enemy icefrog = new Enemy("Icefrog", 322, 100, 20, 20, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'P');
+            Enemy icefrog = new Enemy("Icefrog", 322, 100, 20, 20, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'P', R.drawable.icefrog);
             adjustEnemyLevel(icefrog);
             startActivity(new Intent(Loading.this, SixthScene.class));
         }
@@ -124,12 +124,12 @@ public class Loading extends AppCompatActivity {
             Profile.fighting = 0;
             Profile.largestAtk = 0;
             Profile.largestCrit = 0;
-            Power rapier = new Power("Rapier Thrust", 'W', 'Z', 20);
-            Power dust = new Power("Dust Magic", 'L', 'J', 40);
-            Power summon = new Power("Summon Ice Monster", 'T', 'S', 20);
-            Power blizzard = new Power("Blizzard", 'S', 'Y', 100);
+            Power rapier = new Power("Rapier Thrust", 'W', 'Z', 20, R.drawable.rapier);
+            Power dust = new Power("Dust Magic", 'L', 'J', 40, R.drawable.dust);
+            Power summon = new Power("Summon Ice Monster", 'T', 'S', 20, R.drawable.summon);
+            Power blizzard = new Power("Blizzard", 'S', 'Y', 100, R.drawable.blizzard);
             adjustPowerLevel(rapier, dust, summon, blizzard);
-            Enemy weiss = new Enemy("Ice Queen", 0, 100, 20, 20, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'N');
+            Enemy weiss = new Enemy("Ice Queen", 0, 100, 20, 20, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'N', R.drawable.weiss);
             adjustEnemyLevel(weiss);
             startActivity(new Intent(Loading.this, SeventhScene.class));
         }
@@ -139,12 +139,12 @@ public class Loading extends AppCompatActivity {
             Profile.fighting = 0;
             Profile.largestAtk = 0;
             Profile.largestCrit = 0;
-            Power debt = new Power("Massive Debt", 'C', 'Z', 50);
-            Power albumTour = new Power("Forced Failed Album Tour", 'B', 'J', 50);
-            Power newThing = new Power("Replaced with the hot, new band", 'T', 'S', 20);
-            Power irrelevance = new Power("Devastating Irrelevancy", 'B', 'Y', 100);
+            Power debt = new Power("Massive Debt", 'C', 'Z', 50, R.drawable.debt);
+            Power albumTour = new Power("Forced Failed Album Tour", 'B', 'J', 50, R.drawable.album_tour);
+            Power newThing = new Power("Replaced with the hot, new band", 'T', 'S', 20, R.drawable.new_thing);
+            Power irrelevance = new Power("Devastating Irrelevancy", 'B', 'Y', 100, R.drawable.irrelevant);
             adjustPowerLevel(debt, albumTour, newThing, irrelevance);
-            Enemy ceo = new Enemy("CEO of Old Record Label", 0, 200, 20, 20, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'P');
+            Enemy ceo = new Enemy("CEO of Old Record Label", 0, 200, 20, 20, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'P', R.drawable.ceo);
             adjustEnemyLevel(ceo);
             startActivity(new Intent(Loading.this, EighthScene.class));
         }
@@ -154,12 +154,12 @@ public class Loading extends AppCompatActivity {
             Profile.fighting = 0;
             Profile.largestAtk = 0;
             Profile.largestCrit = 0;
-            Power debt = new Power("Massive Debt", 'C', 'Z', 50);
-            Power albumTour = new Power("Forced Failed Album Tour", 'B', 'J', 50);
-            Power newThing = new Power("Replaced with the hot, new band", 'T', 'S', 20);
-            Power irrelevance = new Power("Devastating Irrelevancy", 'B', 'Y', 100);
+            Power debt = new Power("Massive Debt", 'C', 'Z', 50, R.drawable.debt);
+            Power albumTour = new Power("Forced Failed Album Tour", 'B', 'J', 50, R.drawable.album_tour);
+            Power newThing = new Power("Replaced with the hot, new band", 'T', 'S', 20, R.drawable.new_thing);
+            Power irrelevance = new Power("Devastating Irrelevancy", 'B', 'Y', 100, R.drawable.irrelevant);
             adjustPowerLevel(debt, albumTour, newThing, irrelevance);
-            Enemy ceo = new Enemy("CEO of Old Record Label", 0, 200, 20, 20, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'P');
+            Enemy ceo = new Enemy("CEO of Old Record Label", 0, 200, 20, 20, Profile.enemyPower1, Profile.enemyPower2, Profile.enemyPower3, Profile.enemyPower4, 'P', R.drawable.ceo);
             adjustEnemyLevel(ceo);
             startActivity(new Intent(Loading.this, NinthScene.class));
         }
